@@ -6,7 +6,7 @@ const numberThird2 = document.querySelectorAll(".fourth-block");
 const letter = document.querySelectorAll(".letter");
 let time;
 
-/*CREATION OF STAR
+//CREATION OF STAR
 function stars() {
   const starNumber = 200;
   const container = document.querySelector(".container");
@@ -26,7 +26,7 @@ function stars() {
     star.style.animationDelay = 2 + timeAnimation + "s";
     container.appendChild(star);
   }
-}*/
+}
 
 //INITIALIZATION POSITION RANDOM BLOCKS OF NUMBER AND START MOVING
 function start(nb) {
