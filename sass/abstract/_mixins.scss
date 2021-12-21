@@ -1,0 +1,76 @@
+@use "responsive"as *;
+
+@mixin block() {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 40px;
+   height: 40px;
+   background-color: #eef0f1d3;
+
+   @media #{$small} {
+      width: 20px;
+      height: 20px;
+   }
+}
+
+@mixin positionFirstNumber($top, $left) {
+   top: calc($top + 50%);
+   left: calc($left + 30%);
+
+   @media #{$very-large} {
+      top: calc($top + 50%);
+      left: calc($left + 20%);
+   }
+
+   @media #{$very-small} {
+      top: calc($top + 50%);
+      left: calc($left + 6%);
+   }
+}
+
+@mixin positionSecondNumber($top, $left) {
+   top: calc($top + 50%);
+   left: calc($left + 40%);
+
+   @media #{$very-large} {
+      top: calc($top + 50%);
+      left: calc($left + 37%);
+   }
+
+   @media #{$very-small} {
+      top: calc($top + 50%);
+      left: calc($left + 28%);
+   }
+}
+
+@mixin positionThirdNumber($top, $left) {
+   top: calc($top + 50%);
+   left: calc($left + 50%);
+
+   @media #{$very-large} {
+      top: calc($top + 50%);
+      left: calc($left + 53%);
+   }
+
+   @media #{$very-small} {
+      top: calc($top + 50%);
+      left: calc($left + 51%);
+   }
+}
+
+@mixin positionFourthNumber($top, $left) {
+   top: calc($top + 50%);
+   left: calc($left + 60%);
+
+   @media #{$very-large} {
+      top: calc($top + 50%);
+      left: calc($left + 69%);
+   }
+
+   @media #{$very-small} {
+      top: calc($top + 50%);
+      left: calc($left + 75%);
+   }
+}

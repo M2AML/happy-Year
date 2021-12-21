@@ -1,0 +1,769 @@
+@use "./abstract/mixins"as *;
+@use "./abstract/responsive"as *;
+
+//RESET
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+//FONTS
+@font-face {
+   font-family: Square;
+   src: url("./fonts/aldrich_egular.ttf");
+}
+
+//GENERAL
+.container {
+   overflow: hidden;
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+
+   i {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow:
+         0 0 10px #fff,
+         0 0 20px #fff,
+         0 0 40px #fff,
+         0 0 80px #fff;
+      animation: star linear infinite;
+   }
+}
+
+@keyframes star {
+   0% {
+      opacity: 0;
+   }
+
+   10% {
+      opacity: 1;
+   }
+
+   90% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+.number__container {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   min-width: 100vw;
+   min-height: 100vh;
+   background-color: #181E2B;
+}
+
+//WORD
+.year {
+   min-width: 100%;
+   height: 200px;
+   letter-spacing: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 180px;
+   color: #eef0f1d3;
+   font-family: Square;
+
+   .first-part {
+      margin-right: 100px;
+   }
+
+   @media #{$small} {
+      .first-part {
+         margin-right: 40px;
+      }
+   }
+
+   @media #{$very-small} {
+      .first-part {
+         margin-right: 100px;
+         width: 100%;
+         margin-left: 10%;
+      }
+
+      flex-direction: column;
+      text-align: center;
+   }
+}
+
+.letter {
+   position: relative;
+   transition: all 1.5s ease-in-out;
+   top: var(--top);
+   left: var(--left);
+   font-size: 12rem;
+
+   @media #{$very-large} {
+      font-size: 9rem;
+   }
+
+   @media #{$medium} {
+      font-size: 8rem;
+   }
+
+   @media #{$small} {
+      font-size: 3rem;
+   }
+
+   @media #{$very-small} {
+      font-size: 3rem;
+   }
+}
+
+
+//FIRST NUMBER TWO
+
+.un,
+.deux,
+.trois,
+.quatre,
+.cinq,
+.six,
+.six-un,
+.sept,
+.sept-un,
+.huit,
+.neuf,
+.dix {
+   @include block();
+}
+
+.un {
+   @include positionFirstNumber(40px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(20px, 0px);
+   }
+}
+
+.deux {
+   @include positionFirstNumber(0px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 0;
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid #181E2B;
+   }
+}
+
+@media #{$small} {
+   .deux::before {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #181E2B;
+   }
+}
+
+.trois {
+   @include positionFirstNumber(0px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(0px, 20px);
+   }
+}
+
+.quatre {
+   @include positionFirstNumber(0px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(0px, 40px);
+   }
+
+   &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 0;
+      border-top: 30px solid #181E2B;
+      border-left: 30px solid transparent;
+   }
+}
+
+@media #{$small} {
+   .quatre::after {
+      border-top: 20px solid #181E2B;
+      border-left: 20px solid transparent;
+   }
+}
+
+.cinq {
+   @include positionFirstNumber(40px, 80px);
+   transition: all var(--time) ease-in-out;
+   height: 50px;
+
+   @media #{$small} {
+      height: 25px;
+      @include positionFirstNumber(20px, 40px);
+   }
+}
+
+.six {
+   @include positionFirstNumber(80px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(40px, 20px);
+   }
+
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid transparent;
+      border-left: 40px solid #181E2B;
+   }
+}
+
+@media #{$small} {
+   .six::before {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #181E2B;
+   }
+}
+
+.six-un {
+   @include positionFirstNumber(90px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(45px, 40px);
+   }
+
+   &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid #181E2B;
+      border-left: 40px solid transparent;
+   }
+}
+
+@media #{$small} {
+   .six-un::after {
+      border-bottom: 20px solid #181E2B;
+      border-left: 20px solid transparent;
+   }
+}
+
+.sept {
+   @include positionFirstNumber(120px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(60px, 0px);
+   }
+
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid transparent;
+      border-left: 40px solid #181E2B;
+   }
+}
+
+@media #{$small} {
+   .sept::before {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #181E2B;
+   }
+}
+
+.sept-un {
+   @include positionFirstNumber(120px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFirstNumber(60px, 20px);
+   }
+
+   &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: 10px;
+      right: 0;
+      border-bottom: 30px solid #181E2B;
+      border-left: 30px solid transparent;
+   }
+}
+
+@media #{$small} {
+   .sept-un::after {
+      top: 5px;
+      border-bottom: 15px solid #181E2B;
+      border-left: 15px solid transparent;
+   }
+}
+
+.huit {
+   @include positionFirstNumber(160px, 0px);
+   transition: all var(--time) ease-in-out;
+   width: 50px;
+   height: 38px;
+
+   @media #{$small} {
+      @include positionFirstNumber(80px, 0px);
+      width: 25px;
+      height: 19px;
+   }
+}
+
+.neuf {
+   @include positionFirstNumber(160px, 50px);
+   transition: all var(--time) ease-in-out;
+   width: 30px;
+   height: 38px;
+
+   @media #{$small} {
+      @include positionFirstNumber(80px, 25px);
+      width: 15px;
+      height: 19px;
+   }
+}
+
+.dix {
+   @include positionFirstNumber(160px, 80px);
+   transition: all var(--time) ease-in-out;
+   height: 38px;
+
+   @media #{$small} {
+      @include positionFirstNumber(80px, 40px);
+      height: 19px;
+   }
+}
+
+//NUMBER ZERO
+.number1,
+.number2,
+.number3,
+.number4,
+.number5,
+.number6,
+.number7,
+.number8,
+.number9,
+.number10,
+.number11,
+.number12,
+.number13 {
+   @include block();
+}
+
+.number1 {
+   @include positionSecondNumber(0px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(0px, 0px);
+   }
+
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 0;
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid #181E2B;
+   }
+}
+
+@media #{$small} {
+   .number1::before {
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #181E2B;
+   }
+}
+
+.number2 {
+   @include positionSecondNumber(0px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(0px, 20px);
+   }
+}
+
+.number3 {
+   @include positionSecondNumber(0px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(0px, 40px);
+   }
+
+   &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 0;
+      border-top: 30px solid #181E2B;
+      border-left: 30px solid transparent;
+   }
+}
+
+@media #{$small} {
+   .number3::after {
+      border-top: 20px solid #181E2B;
+      border-left: 20px solid transparent;
+   }
+}
+
+.number4 {
+   @include positionSecondNumber(40px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(20px, 40px);
+   }
+}
+
+.number5 {
+   @include positionSecondNumber(80px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(40px, 40px);
+   }
+}
+
+.number6 {
+   @include positionSecondNumber(120px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(60px, 40px);
+   }
+}
+
+.number7 {
+   @include positionSecondNumber(160px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(80px, 40px);
+   }
+
+   &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 30px solid #181E2B;
+      border-left: 30px solid transparent;
+   }
+}
+
+@media #{$small} {
+   .number7::after {
+      border-bottom: 20px solid #181E2B;
+      border-left: 20px solid transparent;
+   }
+}
+
+.number8 {
+   @include positionSecondNumber(160px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(80px, 20px);
+   }
+}
+
+.number9 {
+   @include positionSecondNumber(160px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(80px, 0px);
+   }
+
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      bottom: 0;
+      left: 0;
+      border-top: 30px solid transparent;
+      border-left: 30px solid #181E2B;
+   }
+}
+
+@media #{$small} {
+   .number9::before {
+      border-top: 20px solid transparent;
+      border-left: 20px solid #181E2B;
+   }
+}
+
+.number10 {
+   @include positionSecondNumber(120px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(60px, 0px);
+   }
+}
+
+.number11 {
+   @include positionSecondNumber(80px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(40px, 0px);
+   }
+}
+
+.number12 {
+   @include positionSecondNumber(40px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionSecondNumber(20px, 0px);
+   }
+}
+
+//SECOND NUMBER TWO
+
+.position1 {
+   @include positionThirdNumber(40px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(20px, 0px);
+   }
+}
+
+.position2 {
+   @include positionThirdNumber(0px, 0px);
+   transition: all var(--time) ease-in-out;
+}
+
+.position3 {
+   @include positionThirdNumber(0px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(0px, 20px);
+   }
+}
+
+.position4 {
+   @include positionThirdNumber(0px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(0px, 40px);
+   }
+}
+
+.position5 {
+   @include positionThirdNumber(40px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(20px, 40px);
+   }
+}
+
+.position6 {
+   @include positionThirdNumber(80px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(40px, 20px);
+   }
+}
+
+.position6-1 {
+   @include positionThirdNumber(90px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(45px, 40px);
+   }
+}
+
+.position7 {
+   @include positionThirdNumber(120px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(60px, 0px);
+   }
+}
+
+.position7-1 {
+   @include positionThirdNumber(120px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(60px, 20px);
+   }
+}
+
+.position8 {
+   @include positionThirdNumber(160px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(80px, 0px);
+   }
+}
+
+.position9 {
+   @include positionThirdNumber(160px, 50px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(80px, 25px);
+   }
+}
+
+.position10 {
+   @include positionThirdNumber(160px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionThirdNumber(80px, 40px);
+   }
+}
+
+//THIRD TWO
+.pos1 {
+   @include positionFourthNumber(40px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(20px, 0px);
+   }
+}
+
+.pos2 {
+   @include positionFourthNumber(0px, 0px);
+   transition: all var(--time) ease-in-out;
+}
+
+.pos3 {
+   @include positionFourthNumber(0px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(0px, 20px);
+   }
+}
+
+.pos4 {
+   @include positionFourthNumber(0px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(0px, 40px);
+   }
+}
+
+.pos5 {
+   @include positionFourthNumber(40px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(20px, 40px);
+   }
+}
+
+.pos6 {
+   @include positionFourthNumber(80px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(40px, 20px);
+   }
+}
+
+.pos6-1 {
+   @include positionFourthNumber(90px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(45px, 40px);
+   }
+}
+
+.pos7 {
+   @include positionFourthNumber(120px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(60px, 0px);
+   }
+}
+
+.pos7-1 {
+   @include positionFourthNumber(120px, 40px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(60px, 20px);
+   }
+}
+
+.pos8 {
+   @include positionFourthNumber(160px, 0px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(80px, 0px);
+   }
+}
+
+.pos9 {
+   @include positionFourthNumber(160px, 50px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(80px, 25px);
+   }
+}
+
+.pos10 {
+   @include positionFourthNumber(160px, 80px);
+   transition: all var(--time) ease-in-out;
+
+   @media #{$small} {
+      @include positionFourthNumber(80px, 40px);
+   }
+}
