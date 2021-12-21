@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-@font-face {
+/*@font-face {
   font-family: Square;
   src: url("./fonts/aldrich_egular.ttf");
-}
+}*/
 .container {
   overflow: hidden;
   position: relative;
@@ -58,7 +58,7 @@
   position: relative;
   top: 180px;
   color: #eef0f1d3;
-  font-family: Square;
+ /*font-family: Square;*/
 }
 .year .first-part {
   margin-right: 100px;
