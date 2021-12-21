@@ -54,6 +54,11 @@
       left: calc($left + 53%);
    }
 
+   @media #{$small} {
+      top: calc($top + 50%);
+      left: calc($left + 55%);
+   }
+
    @media #{$very-small} {
       top: calc($top + 50%);
       left: calc($left + 51%);
@@ -67,6 +72,11 @@
    @media #{$very-large} {
       top: calc($top + 50%);
       left: calc($left + 69%);
+   }
+
+   @media #{$small} {
+      top: calc($top + 50%);
+      left: calc($left + 72%);
    }
 
    @media #{$very-small} {
