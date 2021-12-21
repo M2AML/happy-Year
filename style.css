@@ -1,0 +1,2030 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Square;
+  src: url("./fonts/aldrich_egular.ttf");
+}
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.container i {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  animation: star linear infinite;
+}
+
+@keyframes star {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.number__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #181E2B;
+}
+
+.year {
+  min-width: 100%;
+  height: 200px;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 180px;
+  color: #eef0f1d3;
+  font-family: Square;
+}
+.year .first-part {
+  margin-right: 100px;
+}
+@media screen and (max-width: 640px) {
+  .year .first-part {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .year {
+    flex-direction: column;
+    text-align: center;
+  }
+  .year .first-part {
+    margin-right: 100px;
+    width: 100%;
+    margin-left: 10%;
+  }
+}
+
+.letter {
+  position: relative;
+  transition: all 1.5s ease-in-out;
+  top: var(--top);
+  left: var(--left);
+  font-size: 12rem;
+}
+@media screen and (max-width: 1700px) {
+  .letter {
+    font-size: 9rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .letter {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .letter {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .letter {
+    font-size: 3rem;
+  }
+}
+
+.un,
+.deux,
+.trois,
+.quatre,
+.cinq,
+.six,
+.six-un,
+.sept,
+.sept-un,
+.huit,
+.neuf,
+.dix {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #eef0f1d3;
+}
+@media screen and (max-width: 640px) {
+  .un,
+.deux,
+.trois,
+.quatre,
+.cinq,
+.six,
+.six-un,
+.sept,
+.sept-un,
+.huit,
+.neuf,
+.dix {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.un {
+  top: calc(40px + 50%);
+  left: calc(0px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .un {
+    top: calc(40px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .un {
+    top: calc(40px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .un {
+    top: calc(20px + 50%);
+    left: calc(0px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .un {
+    top: calc(20px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .un {
+    top: calc(20px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+
+.deux {
+  top: calc(0px + 50%);
+  left: calc(0px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .deux {
+    top: calc(0px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .deux {
+    top: calc(0px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+.deux::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #181E2B;
+}
+
+@media screen and (max-width: 640px) {
+  .deux::before {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #181E2B;
+  }
+}
+.trois {
+  top: calc(0px + 50%);
+  left: calc(40px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .trois {
+    top: calc(0px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .trois {
+    top: calc(0px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .trois {
+    top: calc(0px + 50%);
+    left: calc(20px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .trois {
+    top: calc(0px + 50%);
+    left: calc(20px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .trois {
+    top: calc(0px + 50%);
+    left: calc(20px + 6%);
+  }
+}
+
+.quatre {
+  top: calc(0px + 50%);
+  left: calc(80px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .quatre {
+    top: calc(0px + 50%);
+    left: calc(80px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .quatre {
+    top: calc(0px + 50%);
+    left: calc(80px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .quatre {
+    top: calc(0px + 50%);
+    left: calc(40px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .quatre {
+    top: calc(0px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .quatre {
+    top: calc(0px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+.quatre::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  border-top: 30px solid #181E2B;
+  border-left: 30px solid transparent;
+}
+
+@media screen and (max-width: 640px) {
+  .quatre::after {
+    border-top: 20px solid #181E2B;
+    border-left: 20px solid transparent;
+  }
+}
+.cinq {
+  top: calc(40px + 50%);
+  left: calc(80px + 30%);
+  transition: all var(--time) ease-in-out;
+  height: 50px;
+}
+@media screen and (max-width: 1700px) {
+  .cinq {
+    top: calc(40px + 50%);
+    left: calc(80px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .cinq {
+    top: calc(40px + 50%);
+    left: calc(80px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .cinq {
+    height: 25px;
+    top: calc(20px + 50%);
+    left: calc(40px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .cinq {
+    top: calc(20px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .cinq {
+    top: calc(20px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+
+.six {
+  top: calc(80px + 50%);
+  left: calc(40px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .six {
+    top: calc(80px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .six {
+    top: calc(80px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .six {
+    top: calc(40px + 50%);
+    left: calc(20px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .six {
+    top: calc(40px + 50%);
+    left: calc(20px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .six {
+    top: calc(40px + 50%);
+    left: calc(20px + 6%);
+  }
+}
+.six::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid #181E2B;
+}
+
+@media screen and (max-width: 640px) {
+  .six::before {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #181E2B;
+  }
+}
+.six-un {
+  top: calc(90px + 50%);
+  left: calc(80px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .six-un {
+    top: calc(90px + 50%);
+    left: calc(80px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .six-un {
+    top: calc(90px + 50%);
+    left: calc(80px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .six-un {
+    top: calc(45px + 50%);
+    left: calc(40px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .six-un {
+    top: calc(45px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .six-un {
+    top: calc(45px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+.six-un::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid #181E2B;
+  border-left: 40px solid transparent;
+}
+
+@media screen and (max-width: 640px) {
+  .six-un::after {
+    border-bottom: 20px solid #181E2B;
+    border-left: 20px solid transparent;
+  }
+}
+.sept {
+  top: calc(120px + 50%);
+  left: calc(0px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .sept {
+    top: calc(120px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .sept {
+    top: calc(120px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .sept {
+    top: calc(60px + 50%);
+    left: calc(0px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .sept {
+    top: calc(60px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .sept {
+    top: calc(60px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+.sept::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid transparent;
+  border-left: 40px solid #181E2B;
+}
+
+@media screen and (max-width: 640px) {
+  .sept::before {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #181E2B;
+  }
+}
+.sept-un {
+  top: calc(120px + 50%);
+  left: calc(40px + 30%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .sept-un {
+    top: calc(120px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .sept-un {
+    top: calc(120px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .sept-un {
+    top: calc(60px + 50%);
+    left: calc(20px + 30%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .sept-un {
+    top: calc(60px + 50%);
+    left: calc(20px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .sept-un {
+    top: calc(60px + 50%);
+    left: calc(20px + 6%);
+  }
+}
+.sept-un::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 10px;
+  right: 0;
+  border-bottom: 30px solid #181E2B;
+  border-left: 30px solid transparent;
+}
+
+@media screen and (max-width: 640px) {
+  .sept-un::after {
+    top: 5px;
+    border-bottom: 15px solid #181E2B;
+    border-left: 15px solid transparent;
+  }
+}
+.huit {
+  top: calc(160px + 50%);
+  left: calc(0px + 30%);
+  transition: all var(--time) ease-in-out;
+  width: 50px;
+  height: 38px;
+}
+@media screen and (max-width: 1700px) {
+  .huit {
+    top: calc(160px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .huit {
+    top: calc(160px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .huit {
+    top: calc(80px + 50%);
+    left: calc(0px + 30%);
+    width: 25px;
+    height: 19px;
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .huit {
+    top: calc(80px + 50%);
+    left: calc(0px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .huit {
+    top: calc(80px + 50%);
+    left: calc(0px + 6%);
+  }
+}
+
+.neuf {
+  top: calc(160px + 50%);
+  left: calc(50px + 30%);
+  transition: all var(--time) ease-in-out;
+  width: 30px;
+  height: 38px;
+}
+@media screen and (max-width: 1700px) {
+  .neuf {
+    top: calc(160px + 50%);
+    left: calc(50px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .neuf {
+    top: calc(160px + 50%);
+    left: calc(50px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .neuf {
+    top: calc(80px + 50%);
+    left: calc(25px + 30%);
+    width: 15px;
+    height: 19px;
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .neuf {
+    top: calc(80px + 50%);
+    left: calc(25px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .neuf {
+    top: calc(80px + 50%);
+    left: calc(25px + 6%);
+  }
+}
+
+.dix {
+  top: calc(160px + 50%);
+  left: calc(80px + 30%);
+  transition: all var(--time) ease-in-out;
+  height: 38px;
+}
+@media screen and (max-width: 1700px) {
+  .dix {
+    top: calc(160px + 50%);
+    left: calc(80px + 20%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .dix {
+    top: calc(160px + 50%);
+    left: calc(80px + 6%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .dix {
+    top: calc(80px + 50%);
+    left: calc(40px + 30%);
+    height: 19px;
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .dix {
+    top: calc(80px + 50%);
+    left: calc(40px + 20%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .dix {
+    top: calc(80px + 50%);
+    left: calc(40px + 6%);
+  }
+}
+
+.number1,
+.number2,
+.number3,
+.number4,
+.number5,
+.number6,
+.number7,
+.number8,
+.number9,
+.number10,
+.number11,
+.number12,
+.number13 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #eef0f1d3;
+}
+@media screen and (max-width: 640px) {
+  .number1,
+.number2,
+.number3,
+.number4,
+.number5,
+.number6,
+.number7,
+.number8,
+.number9,
+.number10,
+.number11,
+.number12,
+.number13 {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.number1 {
+  top: calc(0px + 50%);
+  left: calc(0px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number1 {
+    top: calc(0px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number1 {
+    top: calc(0px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number1 {
+    top: calc(0px + 50%);
+    left: calc(0px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number1 {
+    top: calc(0px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number1 {
+    top: calc(0px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+.number1::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #181E2B;
+}
+
+@media screen and (max-width: 640px) {
+  .number1::before {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #181E2B;
+  }
+}
+.number2 {
+  top: calc(0px + 50%);
+  left: calc(40px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number2 {
+    top: calc(0px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number2 {
+    top: calc(0px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number2 {
+    top: calc(0px + 50%);
+    left: calc(20px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number2 {
+    top: calc(0px + 50%);
+    left: calc(20px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number2 {
+    top: calc(0px + 50%);
+    left: calc(20px + 28%);
+  }
+}
+
+.number3 {
+  top: calc(0px + 50%);
+  left: calc(80px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number3 {
+    top: calc(0px + 50%);
+    left: calc(80px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number3 {
+    top: calc(0px + 50%);
+    left: calc(80px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+.number3::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  border-top: 30px solid #181E2B;
+  border-left: 30px solid transparent;
+}
+
+@media screen and (max-width: 640px) {
+  .number3::after {
+    border-top: 20px solid #181E2B;
+    border-left: 20px solid transparent;
+  }
+}
+.number4 {
+  top: calc(40px + 50%);
+  left: calc(80px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number4 {
+    top: calc(40px + 50%);
+    left: calc(80px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number4 {
+    top: calc(40px + 50%);
+    left: calc(80px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number4 {
+    top: calc(20px + 50%);
+    left: calc(40px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number4 {
+    top: calc(20px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number4 {
+    top: calc(20px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+
+.number5 {
+  top: calc(80px + 50%);
+  left: calc(80px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number5 {
+    top: calc(80px + 50%);
+    left: calc(80px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number5 {
+    top: calc(80px + 50%);
+    left: calc(80px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number5 {
+    top: calc(40px + 50%);
+    left: calc(40px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number5 {
+    top: calc(40px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number5 {
+    top: calc(40px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+
+.number6 {
+  top: calc(120px + 50%);
+  left: calc(80px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number6 {
+    top: calc(120px + 50%);
+    left: calc(80px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number6 {
+    top: calc(120px + 50%);
+    left: calc(80px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number6 {
+    top: calc(60px + 50%);
+    left: calc(40px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number6 {
+    top: calc(60px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number6 {
+    top: calc(60px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+
+.number7 {
+  top: calc(160px + 50%);
+  left: calc(80px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number7 {
+    top: calc(160px + 50%);
+    left: calc(80px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number7 {
+    top: calc(160px + 50%);
+    left: calc(80px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number7 {
+    top: calc(80px + 50%);
+    left: calc(40px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number7 {
+    top: calc(80px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number7 {
+    top: calc(80px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+.number7::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  border-bottom: 30px solid #181E2B;
+  border-left: 30px solid transparent;
+}
+
+@media screen and (max-width: 640px) {
+  .number7::after {
+    border-bottom: 20px solid #181E2B;
+    border-left: 20px solid transparent;
+  }
+}
+.number8 {
+  top: calc(160px + 50%);
+  left: calc(40px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number8 {
+    top: calc(160px + 50%);
+    left: calc(40px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number8 {
+    top: calc(160px + 50%);
+    left: calc(40px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number8 {
+    top: calc(80px + 50%);
+    left: calc(20px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number8 {
+    top: calc(80px + 50%);
+    left: calc(20px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number8 {
+    top: calc(80px + 50%);
+    left: calc(20px + 28%);
+  }
+}
+
+.number9 {
+  top: calc(160px + 50%);
+  left: calc(0px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number9 {
+    top: calc(160px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number9 {
+    top: calc(160px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number9 {
+    top: calc(80px + 50%);
+    left: calc(0px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number9 {
+    top: calc(80px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number9 {
+    top: calc(80px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+.number9::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 30px solid transparent;
+  border-left: 30px solid #181E2B;
+}
+
+@media screen and (max-width: 640px) {
+  .number9::before {
+    border-top: 20px solid transparent;
+    border-left: 20px solid #181E2B;
+  }
+}
+.number10 {
+  top: calc(120px + 50%);
+  left: calc(0px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number10 {
+    top: calc(120px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number10 {
+    top: calc(120px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number10 {
+    top: calc(60px + 50%);
+    left: calc(0px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number10 {
+    top: calc(60px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number10 {
+    top: calc(60px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+
+.number11 {
+  top: calc(80px + 50%);
+  left: calc(0px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number11 {
+    top: calc(80px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number11 {
+    top: calc(80px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number11 {
+    top: calc(40px + 50%);
+    left: calc(0px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number11 {
+    top: calc(40px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number11 {
+    top: calc(40px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+
+.number12 {
+  top: calc(40px + 50%);
+  left: calc(0px + 40%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .number12 {
+    top: calc(40px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .number12 {
+    top: calc(40px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .number12 {
+    top: calc(20px + 50%);
+    left: calc(0px + 40%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .number12 {
+    top: calc(20px + 50%);
+    left: calc(0px + 37%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .number12 {
+    top: calc(20px + 50%);
+    left: calc(0px + 28%);
+  }
+}
+
+.position1 {
+  top: calc(40px + 50%);
+  left: calc(0px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position1 {
+    top: calc(40px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position1 {
+    top: calc(40px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position1 {
+    top: calc(20px + 50%);
+    left: calc(0px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position1 {
+    top: calc(20px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position1 {
+    top: calc(20px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+
+.position2 {
+  top: calc(0px + 50%);
+  left: calc(0px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position2 {
+    top: calc(0px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position2 {
+    top: calc(0px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+
+.position3 {
+  top: calc(0px + 50%);
+  left: calc(40px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position3 {
+    top: calc(0px + 50%);
+    left: calc(20px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position3 {
+    top: calc(0px + 50%);
+    left: calc(20px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position3 {
+    top: calc(0px + 50%);
+    left: calc(20px + 51%);
+  }
+}
+
+.position4 {
+  top: calc(0px + 50%);
+  left: calc(80px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position4 {
+    top: calc(0px + 50%);
+    left: calc(80px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position4 {
+    top: calc(0px + 50%);
+    left: calc(80px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position4 {
+    top: calc(0px + 50%);
+    left: calc(40px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position4 {
+    top: calc(0px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position4 {
+    top: calc(0px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+
+.position5 {
+  top: calc(40px + 50%);
+  left: calc(80px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position5 {
+    top: calc(40px + 50%);
+    left: calc(80px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position5 {
+    top: calc(40px + 50%);
+    left: calc(80px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position5 {
+    top: calc(20px + 50%);
+    left: calc(40px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position5 {
+    top: calc(20px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position5 {
+    top: calc(20px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+
+.position6 {
+  top: calc(80px + 50%);
+  left: calc(40px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position6 {
+    top: calc(80px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position6 {
+    top: calc(80px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position6 {
+    top: calc(40px + 50%);
+    left: calc(20px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position6 {
+    top: calc(40px + 50%);
+    left: calc(20px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position6 {
+    top: calc(40px + 50%);
+    left: calc(20px + 51%);
+  }
+}
+
+.position6-1 {
+  top: calc(90px + 50%);
+  left: calc(80px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position6-1 {
+    top: calc(90px + 50%);
+    left: calc(80px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position6-1 {
+    top: calc(90px + 50%);
+    left: calc(80px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position6-1 {
+    top: calc(45px + 50%);
+    left: calc(40px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position6-1 {
+    top: calc(45px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position6-1 {
+    top: calc(45px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+
+.position7 {
+  top: calc(120px + 50%);
+  left: calc(0px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position7 {
+    top: calc(120px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position7 {
+    top: calc(120px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position7 {
+    top: calc(60px + 50%);
+    left: calc(0px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position7 {
+    top: calc(60px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position7 {
+    top: calc(60px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+
+.position7-1 {
+  top: calc(120px + 50%);
+  left: calc(40px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position7-1 {
+    top: calc(120px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position7-1 {
+    top: calc(120px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position7-1 {
+    top: calc(60px + 50%);
+    left: calc(20px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position7-1 {
+    top: calc(60px + 50%);
+    left: calc(20px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position7-1 {
+    top: calc(60px + 50%);
+    left: calc(20px + 51%);
+  }
+}
+
+.position8 {
+  top: calc(160px + 50%);
+  left: calc(0px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position8 {
+    top: calc(160px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position8 {
+    top: calc(160px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position8 {
+    top: calc(80px + 50%);
+    left: calc(0px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position8 {
+    top: calc(80px + 50%);
+    left: calc(0px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position8 {
+    top: calc(80px + 50%);
+    left: calc(0px + 51%);
+  }
+}
+
+.position9 {
+  top: calc(160px + 50%);
+  left: calc(50px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position9 {
+    top: calc(160px + 50%);
+    left: calc(50px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position9 {
+    top: calc(160px + 50%);
+    left: calc(50px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position9 {
+    top: calc(80px + 50%);
+    left: calc(25px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position9 {
+    top: calc(80px + 50%);
+    left: calc(25px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position9 {
+    top: calc(80px + 50%);
+    left: calc(25px + 51%);
+  }
+}
+
+.position10 {
+  top: calc(160px + 50%);
+  left: calc(80px + 50%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .position10 {
+    top: calc(160px + 50%);
+    left: calc(80px + 53%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .position10 {
+    top: calc(160px + 50%);
+    left: calc(80px + 51%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .position10 {
+    top: calc(80px + 50%);
+    left: calc(40px + 50%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .position10 {
+    top: calc(80px + 50%);
+    left: calc(40px + 53%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .position10 {
+    top: calc(80px + 50%);
+    left: calc(40px + 51%);
+  }
+}
+
+.pos1 {
+  top: calc(40px + 50%);
+  left: calc(0px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos1 {
+    top: calc(40px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos1 {
+    top: calc(40px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos1 {
+    top: calc(20px + 50%);
+    left: calc(0px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos1 {
+    top: calc(20px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos1 {
+    top: calc(20px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+
+.pos2 {
+  top: calc(0px + 50%);
+  left: calc(0px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos2 {
+    top: calc(0px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos2 {
+    top: calc(0px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+
+.pos3 {
+  top: calc(0px + 50%);
+  left: calc(40px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos3 {
+    top: calc(0px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos3 {
+    top: calc(0px + 50%);
+    left: calc(20px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos3 {
+    top: calc(0px + 50%);
+    left: calc(20px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos3 {
+    top: calc(0px + 50%);
+    left: calc(20px + 75%);
+  }
+}
+
+.pos4 {
+  top: calc(0px + 50%);
+  left: calc(80px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos4 {
+    top: calc(0px + 50%);
+    left: calc(80px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos4 {
+    top: calc(0px + 50%);
+    left: calc(80px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos4 {
+    top: calc(0px + 50%);
+    left: calc(40px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos4 {
+    top: calc(0px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos4 {
+    top: calc(0px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+
+.pos5 {
+  top: calc(40px + 50%);
+  left: calc(80px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos5 {
+    top: calc(40px + 50%);
+    left: calc(80px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos5 {
+    top: calc(40px + 50%);
+    left: calc(80px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos5 {
+    top: calc(20px + 50%);
+    left: calc(40px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos5 {
+    top: calc(20px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos5 {
+    top: calc(20px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+
+.pos6 {
+  top: calc(80px + 50%);
+  left: calc(40px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos6 {
+    top: calc(80px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos6 {
+    top: calc(80px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos6 {
+    top: calc(40px + 50%);
+    left: calc(20px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos6 {
+    top: calc(40px + 50%);
+    left: calc(20px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos6 {
+    top: calc(40px + 50%);
+    left: calc(20px + 75%);
+  }
+}
+
+.pos6-1 {
+  top: calc(90px + 50%);
+  left: calc(80px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos6-1 {
+    top: calc(90px + 50%);
+    left: calc(80px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos6-1 {
+    top: calc(90px + 50%);
+    left: calc(80px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos6-1 {
+    top: calc(45px + 50%);
+    left: calc(40px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos6-1 {
+    top: calc(45px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos6-1 {
+    top: calc(45px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+
+.pos7 {
+  top: calc(120px + 50%);
+  left: calc(0px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos7 {
+    top: calc(120px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos7 {
+    top: calc(120px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos7 {
+    top: calc(60px + 50%);
+    left: calc(0px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos7 {
+    top: calc(60px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos7 {
+    top: calc(60px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+
+.pos7-1 {
+  top: calc(120px + 50%);
+  left: calc(40px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos7-1 {
+    top: calc(120px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos7-1 {
+    top: calc(120px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos7-1 {
+    top: calc(60px + 50%);
+    left: calc(20px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos7-1 {
+    top: calc(60px + 50%);
+    left: calc(20px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos7-1 {
+    top: calc(60px + 50%);
+    left: calc(20px + 75%);
+  }
+}
+
+.pos8 {
+  top: calc(160px + 50%);
+  left: calc(0px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos8 {
+    top: calc(160px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos8 {
+    top: calc(160px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos8 {
+    top: calc(80px + 50%);
+    left: calc(0px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos8 {
+    top: calc(80px + 50%);
+    left: calc(0px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos8 {
+    top: calc(80px + 50%);
+    left: calc(0px + 75%);
+  }
+}
+
+.pos9 {
+  top: calc(160px + 50%);
+  left: calc(50px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos9 {
+    top: calc(160px + 50%);
+    left: calc(50px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos9 {
+    top: calc(160px + 50%);
+    left: calc(50px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos9 {
+    top: calc(80px + 50%);
+    left: calc(25px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos9 {
+    top: calc(80px + 50%);
+    left: calc(25px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos9 {
+    top: calc(80px + 50%);
+    left: calc(25px + 75%);
+  }
+}
+
+.pos10 {
+  top: calc(160px + 50%);
+  left: calc(80px + 60%);
+  transition: all var(--time) ease-in-out;
+}
+@media screen and (max-width: 1700px) {
+  .pos10 {
+    top: calc(160px + 50%);
+    left: calc(80px + 69%);
+  }
+}
+@media screen and (max-width: 480px) {
+  .pos10 {
+    top: calc(160px + 50%);
+    left: calc(80px + 75%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .pos10 {
+    top: calc(80px + 50%);
+    left: calc(40px + 60%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 1700px) {
+  .pos10 {
+    top: calc(80px + 50%);
+    left: calc(40px + 69%);
+  }
+}
+@media screen and (max-width: 640px) and (max-width: 480px) {
+  .pos10 {
+    top: calc(80px + 50%);
+    left: calc(40px + 75%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

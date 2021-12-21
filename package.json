@@ -1,0 +1,15 @@
+{
+  "name": "perso",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.44.0"
+  }
+}
