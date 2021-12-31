@@ -8,11 +8,11 @@
    box-sizing: border-box;
 }
 
-/*FONTS
+//FONTS
 @font-face {
    font-family: Square;
    src: url("./fonts/aldrich_egular.ttf");
-}*/
+}
 
 //GENERAL
 .container {
@@ -75,7 +75,7 @@
    position: relative;
    top: 180px;
    color: #eef0f1d3;
-   //font-family: Square;
+   font-family: Square;
 
    .first-part {
       margin-right: 100px;
